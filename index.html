@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:image" content="resources/teaser.gif" />
+  <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+  <meta property="og:title" content="Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings." />
+
+  <meta name="keywords" content="Constraint Detection, Geometric Constraint Solving, Wireframe, Line Drawing, 3D Reconstruction">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E2B3RJ0QKX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-E2B3RJ0QKX');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script type="text/javascript">
+    function show(name) {
+      document.getElementById('demo').innerHTML = "<div class='column'><img class='input-img' src='resources/test/img/" + name + ".png'></img></div><div class='column'><model-viewer src='resources/test/ours/" + name + ".glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div><div class='column'><model-viewer src='resources/test/gt/" + name + ".glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div>";
+    }
+
+    fetch('resources/test/test.txt').then(res => res.text()).then(text => {
+      return text.split('\n').filter(v => v != '')
+    }).then(list => {
+      console.log(list)
+      const index = Math.floor(Math.random() * list.length)
+      show(list[index])
+      console.log(list[index])
+    })
+  </script>
+</head>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://manycore-research.github.io/faceformer">
+            faceformer
+          </a>
+          <a class="navbar-item" href="https://manycore-research.github.io/cstr">
+            cstr
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://bertjiazheng.github.io">Jia Zheng</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://stevenzzz07.github.io">Yifan Wang</a><sup>2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://jason-khan.github.io">Kehan Wang</a><sup>3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://qiang-zou.github.io">Qiang Zou</a><sup>4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block">
+                <a href="https://zihan-z.github.io">Zihan Zhou</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup><a href="https://kujiale.com">Manycore Tech Inc.</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>2</sup>Nanjing University of Aeronautics and Astronautics</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>3</sup>University of California, Berkeley</span>&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="author-block"><sup>4</sup>State Key Lab of CAD&CG, Zhejiang University </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2207.xxxxx" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/manycore-research/cstr"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img class="input-img" src="static/images/pipeline.png"></img>
+        <h2 class="subtitle has-text-centered">
+          Given (a) an input line drawing, we train deep models to predict (b) geometric constraints (e.g., parallel constraints) and (c) initial depth value of the vertices, which are then used in numerical optimization for geometric constraint solving to obtain an accurate and compact 3D model (d).
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this paper, we revisit the long-standing problem of automatic reconstruction of 3D objects from single line drawings. Previous optimization-based methods can generate compact and accurate 3D models, but their success rates depend heavily on the ability to (i) identifying a sufficient set of true geometric constraints, and (ii) choosing a good initial value for the numerical optimization. In view of these challenges, we propose to train deep neural networks to detect pairwise relationships among geometric entities (i.e., edges) in the 3D object, and to predict initial depth value of the vertices. Our experiments on a large dataset of CAD models show that, by leveraging deep learning in a geometric constraint solving pipeline, the success rate of optimization-based 3D reconstruction can be drastically improved.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section" id="Results">
+    <div class="container is-max-desktop">
+      <!-- Results. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Interactive Results</h2>
+          <div class='row'>
+            <div class='column'>
+              <div class='header'>Input image</div>
+            </div>
+            <div class='column'>
+              <div class='header'>Ours</div>
+            </div>
+            <div class='column'>
+              <div class='header'>Ground truth</div>
+            </div>
+          </div>
+          <div class='row' id="demo">
+          </div>
+        </div>
+        <!-- / Results. -->
+      </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{cstr,
+  author  = {Zheng, Jia and Zhu, Yifan and Wang, Kehan and Zou, Qiang and Zhou, Zihan},
+  title   = {Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings},
+  journal = {CoRR},
+  year    = {2022},
+}</code></pre>
+    </div>
+  </section>
+
+  <section class="section" id="Acknowledgements">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgements</h2>
+      This work was done during Yifan Zhu and Kehan Wang's internships at Manycore Tech Inc.
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. The
+              interactive examples are powered by <a href="https://modelviewer.dev/">model-viewer</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
