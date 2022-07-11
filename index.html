@@ -41,10 +41,10 @@
 
   <script type="text/javascript">
     function show(name) {
-      document.getElementById('demo').innerHTML = "<div class='column'><img class='input-img' src='resources/test/img/" + name + ".png'></img></div><div class='column'><model-viewer src='resources/test/ours/" + name + ".glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div><div class='column'><model-viewer src='resources/test/gt/" + name + ".glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div>";
+      document.getElementById('demo').innerHTML = "<div class='column'><img class='input-img' src='resources/assets/" + name + "/input.png'></img></div><div class='column'><img class='input-img' src='resources/assets/" + name + "/wireframe.png'></img></div><div class='column'><model-viewer src='resources/assets/" + name + "/ours.glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div><div class='column'><model-viewer src='resources/assets/" + name + "/gt.glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div>";
     }
 
-    fetch('resources/test/test.txt').then(res => res.text()).then(text => {
+    fetch('resources/test.txt').then(res => res.text()).then(text => {
       return text.split('\n').filter(v => v != '')
     }).then(list => {
       console.log(list)
@@ -180,7 +180,10 @@
               <div class='header'>Input image</div>
             </div>
             <div class='column'>
-              <div class='header'>Ours</div>
+              <div class='header'>Wireframe (Ours)</div>
+            </div>
+            <div class='column'>
+              <div class='header'>Mesh (Ours)</div>
             </div>
             <div class='column'>
               <div class='header'>Ground truth</div>
