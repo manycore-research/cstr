@@ -41,7 +41,7 @@
 
   <script type="text/javascript">
     function show(name) {
-      document.getElementById('demo').innerHTML = "<div class='column'><img class='input-img' src='resources/assets/" + name + "/input.png'></img></div><div class='column'><img class='input-img' src='resources/assets/" + name + "/wireframe.png'></img></div><div class='column'><model-viewer src='resources/assets/" + name + "/ours.glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div><div class='column'><model-viewer src='resources/assets/" + name + "/gt.glb' camera-controls auto-rotate shadow-intensity='1'></model-viewer></div>";
+      document.getElementById('demo').innerHTML = "<div class='column'><img class='input-img' src='resources/assets/" + name + "/input.png'></img></div><div class='column'><img class='input-img' src='resources/assets/" + name + "/wireframe.png'></img></div><div class='column'><model-viewer orientation='45deg -90deg 0deg' camera-controls auto-rotate shadow-intensity='1' src='resources/assets/" + name + "/ours.glb'></model-viewer></div><div class='column'><model-viewer orientation='45deg -90deg 0deg' camera-controls auto-rotate shadow-intensity='1' src='resources/assets/" + name + "/gt.glb'></model-viewer></div>";
     }
 
     fetch('resources/test.txt').then(res => res.text()).then(text => {
