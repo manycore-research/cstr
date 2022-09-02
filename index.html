@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta property="og:image" content="resources/teaser.gif" />
+  <meta property="og:image" content="static/images/pipeline.png" />
   <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
   <meta property="og:title" content="Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings." />
 
@@ -70,16 +70,15 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://manycore-research.github.io/cstr">
-            cstr
-          </a>
           <a class="navbar-item" href="https://manycore-research.github.io/faceformer">
             faceformer
+          </a>
+          <a class="navbar-item" href="https://manycore-research.github.io/cstr">
+            cstr
           </a>
         </div>
       </div>
     </div>
-
   </div>
 </nav>
 
@@ -109,28 +108,18 @@
               <span class="author-block"><sup>1</sup><a href="https://kujiale.com">Manycore Tech Inc.</a></span>&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="author-block"><sup>2</sup>Nanjing University of Aeronautics and Astronautics</span>&nbsp;&nbsp;&nbsp;&nbsp;
               <span class="author-block"><sup>3</sup>University of California, Berkeley</span>&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="author-block"><sup>4</sup>State Key Lab of CAD&CG, Zhejiang University </span>
+              <span class="author-block"><sup>4</sup>State Key Lab of CAD&amp;CG, Zhejiang University </span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
+                <!-- arXiv Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2207.xxxxx" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2209.xxxxx" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
                     <span>arXiv</span>
-                  </a>
-                </span>
-                <!-- Code Link. -->
-                <span class="link-block">
-                  <a href="https://github.com/manycore-research/cstr"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
                   </a>
                 </span>
               </div>
@@ -160,8 +149,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In this paper, we revisit the long-standing problem of automatic reconstruction of 3D objects from single line drawings. Previous optimization-based methods can generate compact and accurate 3D models, but their success rates depend heavily on the ability to (i) identifying a sufficient set of true geometric constraints, and (ii) choosing a good initial value for the numerical optimization. In view of these challenges, we propose to train deep neural networks to detect pairwise
-              relationships among geometric entities (<em>i.e.</em>, edges) in the 3D object, and to predict initial depth value of the vertices. Our experiments on a large dataset of CAD models show that, by leveraging deep learning in a geometric constraint solving pipeline, the success rate of optimization-based 3D reconstruction can be drastically improved.
+              In this paper, we revisit the long-standing problem of automatic reconstruction of 3D objects from single line drawings. Previous optimization-based methods can generate compact and accurate 3D models, but their success rates depend heavily on the ability to (i) identifying a sufficient set of true geometric constraints, and (ii) choosing a good initial value for the numerical optimization. In view of these challenges, we propose to train deep neural networks to detect pairwise relationships among geometric entities (<em>i.e.</em>, edges) in the 3D object, and to predict initial depth value of the vertices. Our experiments on a large dataset of CAD models show that, by leveraging deep learning in a geometric constraint solving pipeline, the success rate of optimization-based 3D reconstruction can be drastically improved.
             </p>
           </div>
         </div>
@@ -192,9 +180,9 @@
           </div>
           <div class='row' id="demo">
           </div>
-        </div>
-        <!-- / Results. -->
       </div>
+      <!-- / Results. -->
+    </div>
   </section>
 
   <section class="section" id="BibTeX">
@@ -204,6 +192,7 @@
   author  = {Zheng, Jia and Zhu, Yifan and Wang, Kehan and Zou, Qiang and Zhou, Zihan},
   title   = {Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings},
   journal = {CoRR},
+  volume  = {abs/2209.xxxxx},
   year    = {2022},
 }</code></pre>
     </div>
