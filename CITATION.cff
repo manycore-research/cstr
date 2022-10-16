@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+preferred-citation:
+  type: article
+  title: "Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings"
+  journal: CoRR
+  volume: "abs/2209.02692"
+  authors:
+    - family-names: Zheng
+      given-names: Jia
+    - family-names: Zhu
+      given-names: Yifan
+    - family-names: Wang
+      given-names: Kehan
+    - family-names: Zou
+      given-names: Qiang
+    - family-names: Zhou
+      given-names: Zihan
+  year: 2022

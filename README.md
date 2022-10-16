@@ -19,17 +19,3 @@
 <img src="assets/pipeline.png">
 
 </div>
-
-## Citation
-
-Please cite our paper if it helps your research:
-
-```bibtex
-@article{cstr,
-  author  = {Zheng, Jia and Zhu, Yifan and Wang, Kehan and Zou, Qiang and Zhou, Zihan},
-  title   = {Deep Learning Assisted Optimization for 3D Reconstruction from Single 2D Line Drawings},
-  journal = {CoRR},
-  volume  = {abs/2209.02692},
-  year    = {2022},
-}
-```
